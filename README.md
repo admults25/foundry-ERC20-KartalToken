@@ -17,8 +17,8 @@ Bu proje, Ethereum Sepolia testnet'inde bir ERC20 token'ı deploy etmek için Fo
 ## Kurulum
 1. **Depoyu Klonlayın**
     ```bash
-    git clone https://github.com/admults25/Foundry-fundMe.git
-    cd Foundry-fundMe
+    git clone https://github.com/admults25/foundry-ERC20-KartalToken.git
+    cd foundry-ERC20-KartalToken
     ```
 2. **Gerekli Bağımlılıkları Kurun**
     ```bash
