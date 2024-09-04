@@ -2,5 +2,10 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+remappings = ["@openzeppelin/contracts=lib/openzeppelin-contracts/contracts/"]
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+[rpc_endpoints]
+sepolia = "https://eth-sepolia.g.alchemy.com/v2/rPzgNb6Fae2yctxj_wPoEoN1W6mI7EG7"
+
+[profile.sepolia]
+rpc_url = "${rpc_endpoints.sepolia}"
