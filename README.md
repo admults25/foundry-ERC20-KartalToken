@@ -2,7 +2,7 @@
 
 ## Proje Açıklaması
 Bu proje, Ethereum Sepolia testnet'inde bir ERC20 token'ı deploy etmek için Foundry kullanılarak geliştirilmiş bir örnektir. OpenZeppelin kütüphanesi kullanılarak, minting ve burning özelliklerine sahip bir ERC20 token'ı oluşturulmuştur.
-token'ı görüntülemek için [ETHERSCAN Adresi](https://sepolia.etherscan.io/token/0x4bccb01ebefdee011d7f643641f7cdffae6989b0),
+Token'ı görüntülemek için [Tıklayınız](https://sepolia.etherscan.io/token/0x4bccb01ebefdee011d7f643641f7cdffae6989b0),
 
 ## Özellikler
 - ERC20 Token standardına uygun
