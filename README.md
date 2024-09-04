@@ -1,66 +1,46 @@
-## Foundry
+# ERC20 Token Deployment with Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Proje Açıklaması
+Bu proje, Ethereum Sepolia testnet'inde bir ERC20 token'ı deploy etmek için Foundry kullanılarak geliştirilmiş bir örnektir. OpenZeppelin kütüphanesi kullanılarak, minting ve burning özelliklerine sahip bir ERC20 token'ı oluşturulmuştur.
 
-Foundry consists of:
+## Özellikler
+- ERC20 Token standardına uygun
+- Minting ve burning özellikleri
+- Foundry ile testnet'te deploy ve doğrulama
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Gereksinimler
+- Foundry
+- Node.js
+- OpenZeppelin Contracts
+- Alchemy RPC URL'si
 
-## Documentation
+## Kurulum
+1. **Depoyu Klonlayın**
+    ```bash
+    git clone https://github.com/admults25/Foundry-fundMe.git
+    cd Foundry-fundMe
+    ```
+2. **Gerekli Bağımlılıkları Kurun**
+    ```bash
+    forge install
+    ```
+3. **Ortam Değişkenlerini Ayarlayın**
+   Bir `.env` dosyası oluşturun ve Alchemy RPC URL'si ve Etherscan API anahtarınızı ekleyin:
+    ```env
+    PRIVATE_KEY=your_private_key_here
+    ETHERSCAN_API_KEY=your_etherscan_api_key_here
+    ```
+4. **Kontratı Deploy Edin**
+    ```bash
+    forge script script/DeployERC20.s.sol --rpc-url https://eth-sepolia.g.alchemy.com/v2/rPzgNb6Fae2yctxj_wPoEoN1W6mI7EG7 --private-key $PRIVATE_KEY --broadcast --verify
+    ```
+5. **Kontratı Doğrulayın**
+   Eğer doğrulama sırasında API anahtarınız ile ilgili sorun yaşıyorsanız, manuel doğrulama yapabilirsiniz. API anahtarınızı doğru bir şekilde aldığınızdan emin olun ve Etherscan’ın web arayüzünü kullanarak doğrulama işlemini gerçekleştirin.
 
-https://book.getfoundry.sh/
+## Proje Yapısı
+- `src/ERC20Token.sol`: ERC20 token'ının akıllı kontrat kodu.
+- `script/DeployERC20.s.sol`: Kontratı deploy etmek için kullanılan Foundry scripti.
+- `foundry.toml`: Foundry konfigürasyon dosyası.
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## Lisans
+Bu proje MIT Lisansı altında lisanslanmıştır.
